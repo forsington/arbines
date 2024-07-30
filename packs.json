@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Something",
+        "plex": 150,
+        "items": [
+            {
+                "name": "Item 1",
+                "isk": 100
+            },
+            {
+                "name": "Item 2",
+                "isk": 50
+            }
+        ]
+
+    }
+]
