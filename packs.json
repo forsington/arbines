@@ -1,14 +1,79 @@
 [
     {
-        "name": "Large Skill Injector (1)",
-        "plex": 500,
+        "name": "Skill Extractor (50)",
+        "plex": 5600,
         "items": [
             {
-                "name": "Large Skill Injector",
-                "type_id": 40520,
-                "quantity": 4
+                "name": "Skill Extractor",
+                "type_id": 40519,
+                "quantity": 50
             }
         ]
-
+    },
+    {
+        "name": "Skill Extractor (10)",
+        "plex": 1190,
+        "items": [
+            {
+                "name": "Skill Extractor",
+                "type_id": 40519,
+                "quantity": 10
+            }
+        ]
+    },
+    {
+        "name": "Skill Extractor (1)",
+        "plex": 140,
+        "items": [
+            {
+                "name": "Skill Extractor",
+                "type_id": 40519,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Hypercore (100)",
+        "plex": 10,
+        "items": [
+            {
+                "name": "Hypercore",
+                "type_id": 52568,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "name": "Daily Alpha Injector (10)",
+        "plex": 200,
+        "items": [
+            {
+                "name": "Daily Alpha Injector",
+                "type_id": 46375,
+                "quantity": 10
+            }
+        ]
+    },
+    {
+        "name": "Daily Alpha Injector (5)",
+        "plex": 110,
+        "items": [
+            {
+                "name": "Daily Alpha Injector",
+                "type_id": 46375,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "name": "Daily Alpha Injector (1)",
+        "plex": 25,
+        "items": [
+            {
+                "name": "Daily Alpha Injector",
+                "type_id": 46375,
+                "quantity": 1
+            }
+        ]
     }
 ]
