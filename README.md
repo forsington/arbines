@@ -1,9 +1,3 @@
 # arbines
 
-Arbitrage detection for the NES store.
-
-## TODO
-- [ ] Items
-- [ ] Packs
-- [ ] ISK Prices
-- [ ] Analysis
+Quick and dirty arbitrage detection script for the NES store.

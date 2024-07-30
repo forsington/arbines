@@ -15,26 +15,19 @@ func NewClient(server string) *Client {
 		Timeout: time.Minute,
 	}
 	config := swagger.Configuration{
-		BasePath: "https://esi.evetech.net/latest",
-		// UserAgent:  "Testing ESI for a trading script, contact Repping in game",
+		BasePath:   "https://esi.evetech.net/latest",
 		HTTPClient: client,
 	}
 	esi := swagger.NewAPIClient(&config)
 	return &Client{
 		esi:    esi,
-		calls:  0,
 		server: server,
 	}
 }
 
 type Client struct {
 	esi    *swagger.APIClient
-	calls  int
 	server string
-}
-
-func (c *Client) Calls() int {
-	return c.calls
 }
 
 func (c *Client) GetMarketOrders(regionId int, typeId int) ([]swagger.GetMarketsRegionIdOrders200Ok, error) {
@@ -50,7 +43,6 @@ func (c *Client) GetMarketOrders(regionId int, typeId int) ([]swagger.GetMarkets
 	if err != nil {
 		return nil, fmt.Errorf("error fetching market orders for item %d from ESI: %v", typeId, err)
 	}
-	c.calls = c.calls + 1
 
 	return orders, err
 }

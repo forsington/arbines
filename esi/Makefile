@@ -6,4 +6,4 @@ download:
 	wget -O esi.json $(URL)
 
 generate:
-	swagger-codegen generate -i esi.json -l go -o go
+	swagger-codegen generate -i esi.json -l go -o swagger

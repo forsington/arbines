@@ -1,15 +1,12 @@
 [
     {
-        "name": "Something",
-        "plex": 150,
+        "name": "Large Skill Injector (1)",
+        "plex": 500,
         "items": [
             {
-                "name": "Item 1",
-                "isk": 100
-            },
-            {
-                "name": "Item 2",
-                "isk": 50
+                "name": "Large Skill Injector",
+                "type_id": 40520,
+                "quantity": 4
             }
         ]
 
