@@ -11,8 +11,7 @@ import (
 )
 
 var (
-	buyOrderBrokerFee = 0.005
-	salesTax          = 0.0202
+	salesTax = 0.0202
 )
 
 type Item struct {
@@ -53,7 +52,7 @@ func main() {
 		if err != nil {
 			logger.Fatalf("Error loading prices for pack %s", pack.Name)
 		}
-		profit := pack.Arbitrage(plex.BuyFromSell())
+		profit := pack.Arbitrage(plex.BuyPrice)
 
 		logger.Printf("Arbitraging %s will yield %s ISK\n", pack.Name, humanize.Comma(int64(profit)))
 	}
@@ -114,10 +113,7 @@ func findLowestSellOrder(orders []swagger.GetMarketsRegionIdOrders200Ok) float64
 	return lowest
 }
 
-func (i *Item) BuyFromSell() float64 {
-	return i.SellPrice * (1 + buyOrderBrokerFee)
-}
-func (i *Item) SellToBuy() float64 {
+func (i *Item) SansSalesTax() float64 {
 	return i.BuyPrice * (1 - salesTax)
 }
 
@@ -128,7 +124,7 @@ func (p *Pack) Arbitrage(plexPrice float64) float64 {
 	// Calculate the value of the pack
 	value := 0.0
 	for _, item := range p.Items {
-		value += item.SellToBuy() * float64(item.Quantity)
+		value += item.SansSalesTax() * float64(item.Quantity)
 	}
 
 	return value - cost
